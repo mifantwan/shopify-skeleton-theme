@@ -19,8 +19,7 @@
                         <div class="tags"><span>best seller</span></div>
                         <div class="discount"><span>save 15%</span></div>
                         <div class="product-image-container">
-                            <img src="assets/images/products.jpg" alt="Best Sellers">
-                            <img src="assets/images/products-hover.jpg" alt="Best Sellers Hovers">
+                            {{  product.featured_image | image_url: width: 800 | image_tag }}
                         </div>
                     </div>
                     
