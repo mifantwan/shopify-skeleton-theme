@@ -59,7 +59,7 @@
                             <small>1,234 Reviews</small>
                         </div>
                         <div>
-                            <p>{{  product.price | money }} | {{ product.compare_at_price | money }}</p>
+                            <p>{{  product.price | money }}{% if product.compare_at_price %} | {{ product.compare_at_price | money }}{% endif %}</p>
                         </div>
                     </div>
                 </div>
@@ -70,9 +70,11 @@
                 <div class="scrollbar-thumb"></div>
             </div>
         </div>
+        {% if section.settings.show_more %}
         <div class="mobile-button md:hidden">
-            <button>Show More</button>
+            <button>{{ section.settings.show_more }}</button>
         </div>
+        {% endif %}
     </div>
 </section>
 
@@ -106,6 +108,12 @@
       "type": "collection",
       "id": "collection_select",
       "label": "Collection Select"
+    },
+    {
+        "type": "text",
+        "id": "show_more",
+        "label": "Button Text",
+        "default": "Show More"
     }
   ],
   "presets": [
