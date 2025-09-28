@@ -19,7 +19,12 @@
                         <div class="discount"><span>save 15%</span></div>
                         <div class="product-image-container">
                             {% for image in product.images %}
+                                {%  if image.length > 1 %}
                                 {{ image | image_url: width: 800 | image_tag }}
+                                {% else %}
+                                    {{ image | image_url: width: 800 | image_tag }}
+                                    {{ image | image_url: width: 800 | image_tag }}
+                                {% endif %}
                             {% endfor %}
                         </div>
                     </div>
