@@ -1,6 +1,6 @@
 <section class="w-full">
     <div class="flex flex-row justify-between items-center w-full collection-header">
-        <h1 class="md:text-left text-center w-full">Best Sellers</h1>
+        <h1 class="md:text-left text-center w-full">{{ section.settings.collection_title }}</h1>
         <button class="hidden md:flex flex-row items-center gap-2">
             <h2>Shop All Best Sellers</h2> 
             <span>
@@ -19,10 +19,8 @@
                         <div class="discount"><span>save 15%</span></div>
                         <div class="product-image-container">
                             {% for image in product.images %}
-                                {{  image.length }}
-                                {%  if image.length > 1 %}
-                                    {{ image | image_url: width: 800 | image_tag }}
-                                {% endif %}
+                                {{ image | image_url: width: 800 | image_tag }}
+                                {{ image | image_url: width: 800 | image_tag }}
                             {% endfor %}
                         </div>
                     </div>
