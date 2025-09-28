@@ -13,12 +13,12 @@
     <div class="w-full">
         <div class="collection-lists">
             {% for product in section.settings.collection_select.products %}
-                
                 <div class="product-card">
                     <div class="product-image">
                         <div class="tags"><span>best seller</span></div>
                         <div class="discount"><span>save 15%</span></div>
                         <div class="product-image-container">
+                            {{  product.featured_image | image_url: width: 800 | image_tag }}
                             {{  product.featured_image | image_url: width: 800 | image_tag }}
                         </div>
                     </div>
