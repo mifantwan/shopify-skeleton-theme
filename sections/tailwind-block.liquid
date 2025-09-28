@@ -18,9 +18,14 @@
                         <div class="tags"><span>best seller</span></div>
                         <div class="discount"><span>save 15%</span></div>
                         <div class="product-image-container">
-                            {% for image in product.images limit:2 %}
+                            {% if product.images.size == 1 %}
+                                {{ product.featured_image | image_url: width: 800 | image_tag }}
                                 {{ image | image_url: width: 800 | image_tag }}
-                            {% endfor %}
+                            {% else %}
+                                {% for image in product.images limit:2 %}
+                                    {{ image | image_url: width: 800 | image_tag }}
+                                {% endfor %}
+                            {% endif %}
                         </div>
                     </div>
                     
@@ -82,7 +87,13 @@
         "default": "Best Sellers"
     },
     {
-        "type": "link_list",
+        "type": "text",
+        "id": "collection_title_url",
+        "label": "Collection URL Text",
+        "default": "Shop All Best Sellers"
+    },
+    {
+        "type": "url",
         "id": "collection_link",
         "label": "Collection Link"
     },
