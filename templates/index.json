@@ -9,12 +9,15 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "hello-world",
-      "settings": {}
+    "tailwind_block_LPcNiY": {
+      "type": "tailwind-block",
+      "name": "Tailwind Block",
+      "settings": {
+        "collection_select": "automated-collection"
+      }
     }
   },
   "order": [
-    "main"
+    "tailwind_block_LPcNiY"
   ]
 }
