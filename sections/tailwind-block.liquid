@@ -1,14 +1,14 @@
 <section class="w-full">
     <div class="flex flex-row justify-between items-center w-full collection-header">
         <h1 class="md:text-left text-center w-full">{{ section.settings.collection_title }}</h1>
-        <button class="hidden md:flex flex-row items-center gap-2">
+        <a href="{{ section.settings.collection_link }}" class="hidden md:flex flex-row items-center gap-2">
             <h2>{{ section.settings.collection_title_url }}</h2> 
             <span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.33334 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#5C553A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </span>
-        </button>
+        </a>
     </div>
     <div class="w-full">
         <div class="collection-lists">
