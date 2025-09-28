@@ -9,12 +9,13 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "hello-world",
+    "tailwind_block_9N9Yin": {
+      "type": "tailwind-block",
+      "name": "Tailwind Block",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "tailwind_block_9N9Yin"
   ]
 }
