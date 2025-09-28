@@ -18,8 +18,7 @@
                         <div class="tags"><span>best seller</span></div>
                         <div class="discount"><span>save 15%</span></div>
                         <div class="product-image-container">
-                            {% for image in product.images %}
-                                {{ image | image_url: width: 800 | image_tag }}
+                            {% for image in product.images limit:2 %}
                                 {{ image | image_url: width: 800 | image_tag }}
                             {% endfor %}
                         </div>
