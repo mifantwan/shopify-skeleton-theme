@@ -2,11 +2,6 @@
 <html lang="{{ request.locale.iso_code }}">
   <head>
     {% # Inlined CSS Variables %}
-    {% render 'css-variables' %}
-
-    {% # Load and preload the critical CSS %}
-    {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
-
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
 
@@ -20,8 +15,9 @@
   <body class="font-custom-body text-sm font-semibold leading-body tracking-body text-custom-brown">>
     {% sections 'header-group' %}
 
+    <main>
     {{ content_for_layout }}
-
+    </main>
     {% sections 'footer-group' %}
   </body>
 </html>
