@@ -13,9 +13,6 @@
       "type": "tailwind-block",
       "name": "Tailwind Block",
       "settings": {
-        "collection_title": "Best Sellers",
-        "collection_title_url": "Shop All Best Sellers",
-        "collection_link": "shopify://collections",
         "collection_select": "automated-collection"
       }
     }
